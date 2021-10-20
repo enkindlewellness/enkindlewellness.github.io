@@ -16,7 +16,7 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "Stewart Bros"  # (translatable)
+BLOG_AUTHOR = "Stewart Brothers"  # (translatable)
 BLOG_TITLE = "Enkindle Wellness"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!

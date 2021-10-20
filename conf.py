@@ -27,6 +27,13 @@ SITE_URL = "https://enkindlewellness.github.io/"
 BLOG_EMAIL = "nstwrt@protonmail.com"
 BLOG_DESCRIPTION = "Company website"  # (translatable)
 
+# Note used in default CONTENT_FOOTER_FORMATS = 
+#            "email": BLOG_EMAIL,
+#            "author": BLOG_AUTHOR,
+#            "date": time.gmtime().tm_year,
+#            "license": LICENSE
+
+
 # Nikola is multilingual!
 #
 # Currently supported languages are:
@@ -689,7 +696,7 @@ GITHUB_COMMIT_SOURCE = True
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
-# OUTPUT_FOLDER = 'output'
+OUTPUT_FOLDER = 'output'
 
 # where the "cache" of partial generated content should be located
 # default: 'cache'

@@ -145,9 +145,11 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 #          with a ``/``, otherwise end them with ``/index.html`` — or
 #          else they won’t be highlighted when active.
 
+# Ian - Added index as home page. 2021-10-21
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/pages/index.html", "Home"), 
+        ("/index.html", "Home"), 
+        #("/pages/index.html", "Home"), 
         ("/archive.html", "Archive"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS feed"),
@@ -248,7 +250,8 @@ POSTS = (
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("pages/*.rst", "pages", "page.tmpl"),
+    ("pages/*.rst", "", "page.tmpl"),
+    #("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
     ("pages/*.html", "pages", "page.tmpl"),
@@ -370,6 +373,7 @@ COMPILERS = {
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
+
 # Ian - 2021-10-21 Took image from Kens site
 LOGO_URL = '/images/EW-Logo-Cropped-180-x-72px.jpg'
 
@@ -385,6 +389,7 @@ LOGO_URL = '/images/EW-Logo-Cropped-180-x-72px.jpg'
 # already contains the text), set this to False.
 # Note: if your logo is a SVG image, and you set SHOW_BLOG_TITLE = False,
 # you should explicitly set a height for #logo in CSS.
+
 # Ian - Turn off the title, change to False as its already in the Logo.
 SHOW_BLOG_TITLE = False
 
@@ -584,7 +589,9 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-# INDEX_PATH = ""
+
+# Ian - Avoid blog index page being the main index, by pushing to "blog".
+INDEX_PATH = "blog"
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
@@ -936,6 +943,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 #
 # CODE_COLOR_SCHEME = 'default'
 
+# TODO: Ian
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>

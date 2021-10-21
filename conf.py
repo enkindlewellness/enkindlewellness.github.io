@@ -375,7 +375,9 @@ COMPILERS = {
 # The URL may be relative to the site root.
 
 # Ian - 2021-10-21 Took image from Kens site
-LOGO_URL = '/images/EW-Logo-Cropped-180-x-72px.jpg'
+#LOGO_URL = '/images/EW-Logo-Cropped-180-x-72px.jpg' <-- Creates a thumbnail.
+# This LOGO is off files
+LOGO_URL = '/assets/img/EW-Logo-Cropped-180-x-72px.jpg
 
 # When linking posts to social media, Nikola provides Open Graph metadata
 # which is used to show a nice preview. This includes an image preview
